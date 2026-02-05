@@ -153,8 +153,8 @@ export class ITickWebSocketManager implements DurableObject {
 						.measurement('depth')
 						.setTag('symbol', data.data.s)
 						.setTimestamp(data.data.t * 1_000_000)
-						.setFloatField('buy', data.data.b.p)
-						.setFloatField('sell', data.data.a.p);
+						.setFloatField('buy', data.data.b[0].p)
+						.setFloatField('sell', data.data.a[0].p);
 					await this.influxDBClient.write(point);
 					break;
 				default:
