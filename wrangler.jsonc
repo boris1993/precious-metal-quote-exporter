@@ -49,7 +49,6 @@
 		]
 	},
 	"vars": {
-		"KAFKA_REST_URL": "https://default-boris1993-4195.k.aivencloud.com:22572",
 		"INFLUX_DB_HOST": "https://us-east-1-1.aws.cloud2.influxdata.com",
 		"INFLUX_DB_BUCKET": "precious-metal-quote"
 	}
