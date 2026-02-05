@@ -132,7 +132,6 @@ export class ITickWebSocketManager implements DurableObject {
 					console.warn(`Unhandled response action: ${resAc}, message: ${data.msg}`);
 			}
 		} else if (data.data) {
-			console.debug(`Data received:\n${JSON.stringify(data.data)}\n`);
 			if (data.code !== 1) {
 				console.error('Error sent in data:', data.msg);
 				return;
