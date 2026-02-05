@@ -1,7 +1,8 @@
 {
 	"name": "precious-metal-quote-exporter",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"private": true,
+	"license": "MIT",
 	"scripts": {
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
@@ -11,8 +12,13 @@
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.12.4",
+		"@types/node": "^25.2.0",
 		"typescript": "^5.5.2",
 		"vitest": "~3.2.0",
-		"wrangler": "^4.62.0"
+		"wrangler": "^4.62.0",
+		"tslib": "^2.8.1"
+	},
+	"dependencies": {
+		"@influxdata/influxdb3-client": "^2.0.0"
 	}
 }

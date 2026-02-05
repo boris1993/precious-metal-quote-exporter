@@ -7,8 +7,29 @@
 	"name": "precious-metal-quote-exporter",
 	"main": "src/index.ts",
 	"compatibility_date": "2026-01-31",
+	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
 		"enabled": true
+	},
+	"durable_objects": {
+		"bindings": [{
+			"name": "PRECIOUS_METAL_QUOTE_LISTENER_DO",
+			"class_name": "ITickWebSocketManager"
+		}]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_classes": ["ITickWebSocketManager"]
+		}
+	],
+	"triggers": {
+		"crons": ["* * * * *"]
+	},
+	"vars": {
+		"KAFKA_REST_URL": "https://default-boris1993-4195.k.aivencloud.com:22572",
+		"INFLUX_DB_HOST": "https://us-east-1-1.aws.cloud2.influxdata.com",
+		"INFLUX_DB_BUCKET": "precious-metal-quote"
 	}
 	/**
 	 * Smart Placement
